@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daddypirate28-sudo.github.io/topofertas-landing/sitemap.xml

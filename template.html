@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TopOfertas — Ofertas de Amazon curadas a diario</title>
 <meta name="description" content="Cada día seleccionamos los mejores precios de Amazon España, elegidos a mano, sin ruido ni spam.">
+<link rel="canonical" href="https://daddypirate28-sudo.github.io/topofertas-landing/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TopOfertas — Ofertas de Amazon curadas a diario">
+<meta property="og:description" content="Cada día seleccionamos los mejores precios de Amazon España, elegidos a mano, sin ruido ni spam.">
+<meta property="og:url" content="https://daddypirate28-sudo.github.io/topofertas-landing/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TopOfertas — Ofertas de Amazon curadas a diario">
+<meta name="twitter:description" content="Cada día seleccionamos los mejores precios de Amazon España, elegidos a mano, sin ruido ni spam.">
 <style>
   :root{
     --ground:#050505;
@@ -232,6 +240,14 @@
     if (offersEmpty) offersEmpty.textContent = dict.offersEmpty;
     document.querySelectorAll(".offer-card a.btn").forEach(function(el){
       el.textContent = dict.offerBtn;
+    });
+    document.querySelectorAll(".offer-card .title").forEach(function(el){
+      var ptTitle = el.getAttribute("data-title-pt");
+      if (lang === "pt" && ptTitle) {
+        el.textContent = ptTitle;
+      } else {
+        el.textContent = el.getAttribute("data-title-es") || el.textContent;
+      }
     });
   } catch (e) {}
 })();
