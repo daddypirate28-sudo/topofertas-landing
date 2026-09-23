@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TopOfertas — Ofertas de Amazon curadas a diario</title>
+<meta name="description" content="Cada día seleccionamos los mejores precios de Amazon España, elegidos a mano, sin ruido ni spam.">
+<style>
+  :root{
+    --ground:#0f1a1c;
+    --surface:#152528;
+    --ink:#f2ede4;
+    --ink-dim:#a9b8b8;
+    --accent:#ff6b4a;
+    --accent-ink:#1a0f0a;
+    --line:rgba(242,237,228,0.12);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --ground:#faf7f1;
+      --surface:#ffffff;
+      --ink:#181410;
+      --ink-dim:#6b6259;
+      --accent:#e2542a;
+      --accent-ink:#fff6f1;
+      --line:rgba(24,20,16,0.1);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#faf7f1; --surface:#ffffff; --ink:#181410; --ink-dim:#6b6259;
+    --accent:#e2542a; --accent-ink:#fff6f1; --line:rgba(24,20,16,0.1);
+  }
+  :root[data-theme="dark"]{
+    --ground:#0f1a1c; --surface:#152528; --ink:#f2ede4; --ink-dim:#a9b8b8;
+    --accent:#ff6b4a; --accent-ink:#1a0f0a; --line:rgba(242,237,228,0.12);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:'Public Sans', system-ui, sans-serif;
+    padding-inline:20px;
+  }
+  .wrap{max-width:720px;margin:0 auto;}
+
+  .display{ font-family:'Fraunces', Georgia, serif; font-optical-sizing:auto; }
+  .mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; }
+
+  header.hero{ padding-block:56px 40px; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--accent);
+    margin:0 0 16px;
+  }
+  h1{
+    font-size:clamp(2.1rem, 5.5vw, 3.4rem); line-height:1.05;
+    margin:0 0 18px; text-wrap:balance; font-weight:600;
+  }
+  .lede{
+    font-size:1.1rem; line-height:1.55; color:var(--ink-dim);
+    max-width:52ch; margin:0 0 32px;
+  }
+
+  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:14px 24px;
+    border-radius:999px; font-weight:600; font-size:0.98rem;
+    text-decoration:none; border:1px solid transparent;
+  }
+  .btn-primary{ background:var(--accent); color:var(--accent-ink); }
+  .btn-ghost{ color:var(--ink); border-color:var(--line); }
+
+  section{ padding-block:36px; border-top:1px solid var(--line); }
+  .section-label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-dim);
+    margin:0 0 20px;
+  }
+
+  .steps{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+  @media (max-width:640px){ .steps{ grid-template-columns:1fr; } }
+  .step{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:14px; padding:20px;
+  }
+  .step .num{
+    font-family:'IBM Plex Mono', monospace; color:var(--accent);
+    font-size:0.85rem; margin:0 0 10px;
+  }
+  .step h3{ margin:0 0 8px; font-size:1.05rem; }
+  .step p{ margin:0; color:var(--ink-dim); font-size:0.92rem; line-height:1.5; }
+
+  .disclosure{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:14px; padding:20px 22px; font-size:0.88rem;
+    line-height:1.6; color:var(--ink-dim);
+  }
+  .disclosure strong{ color:var(--ink); }
+
+  footer{
+    padding-block:32px 48px; border-top:1px solid var(--line);
+    color:var(--ink-dim); font-size:0.85rem;
+    display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+  a{ color:var(--ink); }
+  img{ max-width:100%; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">TopOfertas · Curaduría diaria</p>
+    <h1 class="display">Los mejores precios de Amazon,<br>elegidos a mano cada día.</h1>
+    <p class="lede">Reviso a diario los productos más vendidos de Amazon y comparto solo los que de verdad valen la pena — sin ruido, sin spam, una vez al día.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://t.me/mike_topofertas" target="_blank" rel="noopener">Unirme al canal de Telegram</a>
+      <a class="btn btn-ghost" href="https://x.com/dp_alve" target="_blank" rel="noopener">Seguir en X</a>
+    </div>
+  </header>
+
+  <section id="como-funciona">
+    <p class="section-label">Cómo funciona</p>
+    <div class="steps">
+      <div class="step">
+        <p class="num">01</p>
+        <h3>Reviso</h3>
+        <p>Cada día reviso los rankings de más vendidos de Amazon España por categoría.</p>
+      </div>
+      <div class="step">
+        <p class="num">02</p>
+        <h3>Curo</h3>
+        <p>Descarto lo genérico y quedo solo con lo que tiene precio, valoraciones y demanda real.</p>
+      </div>
+      <div class="step">
+        <p class="num">03</p>
+        <h3>Comparto</h3>
+        <p>Publico la selección en el canal de Telegram, con precio y enlace directo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Divulgación de afiliado</p>
+    <div class="disclosure">
+      <strong>Como Afiliado de Amazon, gano con las compras que califican.</strong> Los enlaces de este sitio y del canal de Telegram asociado son enlaces de afiliado del Programa de Afiliados de Amazon EU (Amazon.es). Esto no supone ningún coste adicional para quien compra.
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">TopOfertas</span>
+    <span>Afiliado del Programa de Afiliados de Amazon EU</span>
+  </footer>
+</div>
+</body>
+</html>
